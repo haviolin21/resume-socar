@@ -1,6 +1,8 @@
 .motivation-section {
-  background-color: #111111;
+  background: linear-gradient(to bottom, var(--bg-main) 0%, #111111 15%, #111111 85%, var(--bg-main) 100%);
   color: #ffffff;
+  padding: 120px 0;
+  border-bottom: none;
 }
 
 .motivation-section .section-title {

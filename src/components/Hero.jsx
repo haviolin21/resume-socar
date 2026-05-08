@@ -3,18 +3,34 @@ import './Hero.css';
 
 const Hero = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const [scrollY, setScrollY] = useState(0);
 
   useEffect(() => {
     // Trigger animation shortly after mount
     const timer = setTimeout(() => {
       setIsVisible(true);
     }, 100);
-    return () => clearTimeout(timer);
+
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
+    window.addEventListener('scroll', handleScroll, { passive: true });
+
+    return () => {
+      clearTimeout(timer);
+      window.removeEventListener('scroll', handleScroll);
+    };
   }, []);
 
   return (
     <section className="hero-section">
-      <div className="container hero-container">
+      <div 
+        className="container hero-container"
+        style={{
+          transform: `translateY(${scrollY * 0.4}px)`,
+          opacity: Math.max(1 - scrollY / 500, 0)
+        }}
+      >
         <h1 className={`hero-title ${isVisible ? 'visible' : ''}`}>
           <span className="line">데이터 기반으로</span>
           <br />
