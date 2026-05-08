@@ -23,9 +23,7 @@ function App() {
       <Stats />
       <div className="container">
         <About />
-      </div>
-      <Motivation />
-      <div className="container">
+        <Motivation />
         <Experience />
         <Projects />
         <Education />
