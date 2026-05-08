@@ -1,0 +1,63 @@
+.header {
+  background-color: var(--bg-secondary);
+  padding: 80px 0;
+  border-bottom: none;
+}
+
+.name {
+  font-size: 42px;
+  margin-bottom: 8px;
+}
+
+.role {
+  font-size: 20px;
+  color: var(--primary);
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+
+.contact-info {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  color: var(--text-secondary);
+  background: #fff;
+  padding: 8px 16px;
+  border-radius: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  transition: transform 0.2s;
+}
+
+.contact-item:hover {
+  transform: translateY(-2px);
+  color: var(--primary);
+}
+
+.summary {
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--text-main);
+  background: #fff;
+  padding: 32px;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+}
+
+.summary p {
+  margin-bottom: 16px;
+}
+
+.summary p:last-child {
+  margin-bottom: 0;
+}
+
+.action-buttons {
+  margin-top: 32px;
+}
