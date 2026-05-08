@@ -1,5 +1,7 @@
 import React from 'react';
 import Navbar from './components/Navbar';
+import Hero from './components/Hero';
+import Stats from './components/Stats';
 import Header from './components/Header';
 import About from './components/About';
 import Motivation from './components/Motivation';
@@ -14,10 +16,16 @@ function App() {
   return (
     <div className="app-container">
       <Navbar />
-      <Header />
+      <Hero />
+      <div className="container">
+        <Header />
+      </div>
+      <Stats />
       <div className="container">
         <About />
-        <Motivation />
+      </div>
+      <Motivation />
+      <div className="container">
         <Experience />
         <Projects />
         <Education />

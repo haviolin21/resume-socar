@@ -1,0 +1,114 @@
+.hero-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg-main);
+  position: relative;
+  overflow: hidden;
+  padding-top: 70px; /* Navbar height compensation */
+}
+
+.hero-container {
+  text-align: center;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.hero-title {
+  font-size: 5vw;
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  margin-bottom: 40px;
+  color: var(--text-main);
+}
+
+@media (min-width: 1200px) {
+  .hero-title {
+    font-size: 72px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 36px;
+  }
+}
+
+.hero-title .line {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1), transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hero-title.visible .line {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hero-title .line:nth-child(1) { transition-delay: 0.1s; }
+.hero-title .line:nth-child(3) { transition-delay: 0.3s; }
+.hero-title .line:nth-child(5) { transition-delay: 0.5s; }
+
+.hero-title .highlight {
+  color: var(--primary);
+}
+
+.hero-subtitle {
+  font-size: 20px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease 0.8s, transform 1s ease 0.8s;
+  font-weight: 500;
+}
+
+.hero-subtitle.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.scroll-indicator {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 0;
+  animation: fadeInIndicator 2s ease 1.5s forwards;
+}
+
+@keyframes fadeInIndicator {
+  to { opacity: 1; }
+}
+
+.mouse {
+  width: 24px;
+  height: 36px;
+  border: 2px solid var(--text-secondary);
+  border-radius: 12px;
+  position: relative;
+}
+
+.mouse::before {
+  content: '';
+  position: absolute;
+  top: 6px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 6px;
+  background-color: var(--text-secondary);
+  border-radius: 2px;
+  animation: scrollDrop 1.5s infinite;
+}
+
+@keyframes scrollDrop {
+  0% { transform: translate(-50%, 0); opacity: 1; }
+  100% { transform: translate(-50%, 12px); opacity: 0; }
+}
