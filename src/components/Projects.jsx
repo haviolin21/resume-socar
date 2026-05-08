@@ -104,13 +104,6 @@ const Projects = () => {
             </div>
             
             <div className="modal-body">
-              <div className="modal-section story-section">
-                <h4>상세 내용</h4>
-                {selectedProject.details.story.map((p, i) => (
-                  <p key={i}>{p}</p>
-                ))}
-              </div>
-
               <div className="modal-section-group">
                 <h4>문제 정의 및 실행 결과</h4>
                 <div className="modal-subsection">
@@ -125,6 +118,13 @@ const Projects = () => {
                   <h5 className="label result">결과</h5>
                   <p>{selectedProject.details.result}</p>
                 </div>
+              </div>
+
+              <div className="modal-section story-section">
+                <h4>상세 내용</h4>
+                {selectedProject.details.story.map((p, i) => (
+                  <p key={i}>{p}</p>
+                ))}
               </div>
             </div>
           </div>
