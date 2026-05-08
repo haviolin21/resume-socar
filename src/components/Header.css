@@ -1,6 +1,6 @@
 .header {
-  background-color: var(--bg-secondary);
-  padding: 80px 0;
+  background-color: var(--bg-main);
+  padding: 40px 0;
   border-bottom: none;
 }
 
