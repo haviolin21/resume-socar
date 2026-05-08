@@ -1,7 +1,9 @@
 import React from 'react';
+import useScrollReveal from '../hooks/useScrollReveal';
 import './About.css';
 
 const About = () => {
+  const [ref, isVisible] = useScrollReveal();
   const competencies = [
     {
       title: '데이터 기반 운영 구조 개선 및 자동화',
@@ -46,7 +48,7 @@ const About = () => {
   ];
 
   return (
-    <section className="section about-section fade-in">
+    <section id="about" ref={ref} className={`section about-section reveal-hidden ${isVisible ? 'reveal-visible' : ''}`}>
       <h2 className="section-title">핵심 역량</h2>
       <div className="competencies-grid">
         {competencies.map((comp, index) => (

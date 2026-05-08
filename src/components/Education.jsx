@@ -1,9 +1,11 @@
 import React from 'react';
+import useScrollReveal from '../hooks/useScrollReveal';
 import './Education.css';
 
 const Education = () => {
+  const [ref, isVisible] = useScrollReveal();
   return (
-    <section className="section education-section fade-in">
+    <section id="education" ref={ref} className={`section education-section reveal-hidden ${isVisible ? 'reveal-visible' : ''}`}>
       <h2 className="section-title">학력 및 교육</h2>
       
       <div className="edu-block">

@@ -1,8 +1,23 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { createPortal } from 'react-dom';
+import useScrollReveal from '../hooks/useScrollReveal';
 import './Projects.css';
 
 const Projects = () => {
   const [selectedProject, setSelectedProject] = useState(null);
+  const [ref, isVisible] = useScrollReveal();
+
+  // Prevent scrolling on body when modal is open
+  useEffect(() => {
+    if (selectedProject) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [selectedProject]);
 
   const projects = [
     {
@@ -70,7 +85,7 @@ const Projects = () => {
   ];
 
   return (
-    <section className="section projects-section fade-in">
+    <section id="projects" ref={ref} className={`section projects-section reveal-hidden ${isVisible ? 'reveal-visible' : ''}`}>
       <h2 className="section-title">Projects</h2>
       
       <div className="projects-grid">
@@ -94,7 +109,7 @@ const Projects = () => {
         ))}
       </div>
 
-      {selectedProject && (
+      {selectedProject && createPortal(
         <div className="modal-overlay" onClick={() => setSelectedProject(null)}>
           <div className="modal-content" onClick={e => e.stopPropagation()}>
             <button className="close-btn" onClick={() => setSelectedProject(null)}>×</button>
@@ -128,7 +143,8 @@ const Projects = () => {
               </div>
             </div>
           </div>
-        </div>
+        </div>,
+        document.body
       )}
     </section>
   );

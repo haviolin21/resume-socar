@@ -1,7 +1,9 @@
 import React from 'react';
+import useScrollReveal from '../hooks/useScrollReveal';
 import './Experience.css';
 
 const Experience = () => {
+  const [ref, isVisible] = useScrollReveal();
   const experiences = [
     {
       company: '김캐디',
@@ -88,7 +90,7 @@ const Experience = () => {
   ];
 
   return (
-    <section className="section experience-section fade-in">
+    <section id="experience" ref={ref} className={`section experience-section reveal-hidden ${isVisible ? 'reveal-visible' : ''}`}>
       <div className="experience-header">
         <h2 className="section-title">경력사항</h2>
         <span className="total-exp">총 경력 7년</span>

@@ -1,9 +1,11 @@
 import React from 'react';
+import useScrollReveal from '../hooks/useScrollReveal';
 import './Motivation.css';
 
 const Motivation = () => {
+  const [ref, isVisible] = useScrollReveal();
   return (
-    <section className="section motivation-section fade-in">
+    <section id="motivation" ref={ref} className={`section motivation-section reveal-hidden ${isVisible ? 'reveal-visible' : ''}`}>
       <h2 className="section-title">지원 동기</h2>
       
       <div className="motivation-card">
