@@ -1,11 +1,13 @@
 import React from 'react';
+import useScrollReveal from '../hooks/useScrollReveal';
 import './Header.css';
 
 const Header = () => {
+  const [ref, isVisible] = useScrollReveal();
   return (
-    <header className="header section">
+    <header className="header section" ref={ref}>
       <div className="container">
-        <div className="header-content fade-in">
+        <div className={`header-content reveal-hidden ${isVisible ? 'reveal-visible' : ''}`}>
           <div className="header-info">
             <h1 className="name">하윤택</h1>
             <p className="role">운영 전문가</p>
