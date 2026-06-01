@@ -9,7 +9,7 @@ const Header = () => {
       <div className="container">
         <div className={`header-content reveal-hidden ${isVisible ? 'reveal-visible' : ''}`}>
           <div className="header-info">
-            <h1 className="name">하윤택</h1>
+            <h2 className="name">하윤택</h2>
             <p className="role">Business Operations 매니저</p>
             
             <div className="contact-info">

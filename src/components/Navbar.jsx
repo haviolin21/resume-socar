@@ -33,7 +33,7 @@ const Navbar = () => {
       <div className="container nav-container">
         <div className="nav-logo" onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})}>
           <img src="/favicon.svg" alt="Logo" className="nav-icon" />
-          <span className="nav-title">하윤택 | 운영 전문가</span>
+          <span className="nav-title">하윤택 | Business Operations</span>
         </div>
         <div className="nav-links">
           <button onClick={() => scrollTo('about')}>핵심 역량</button>
