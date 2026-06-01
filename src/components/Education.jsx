@@ -24,28 +24,28 @@ const Education = () => {
         
         <div className="edu-item">
           <div className="edu-header">
-            <h4 className="edu-title">Software Engineering</h4>
-            <span className="edu-period">2020.12 ~ 2021.04</span>
-          </div>
-          <p className="edu-details">코드스테이츠(Code States)</p>
-          <ul className="edu-desc">
-            <li>웹 서비스 구조 및 데이터베이스 설계 기초 학습</li>
-            <li>API 및 서버–클라이언트 구조 이해</li>
-            <li>Git 기반 협업 및 팀 프로젝트 수행</li>
-            <li>개발 조직과의 협업을 위한 기술 커뮤니케이션 역량 확보</li>
-          </ul>
-        </div>
-
-        <div className="edu-item">
-          <div className="edu-header">
             <h4 className="edu-title">빅데이터 분석</h4>
             <span className="edu-period">2025.02 ~ 2025.03</span>
           </div>
           <p className="edu-details">코드잇(Codeit)</p>
           <ul className="edu-desc">
-            <li>Python(Pandas) 기반 데이터 전처리 및 EDA 수행</li>
-            <li>Matplotlib 기반 데이터 시각화 및 분석 학습</li>
-            <li>데이터 기반 가설 검증 및 운영 개선 리포트 작성 경험</li>
+            <li>Python 기반 데이터 분석 과정 수료</li>
+            <li>Pandas 기반 데이터 전처리 및 분석</li>
+            <li>데이터 시각화 및 분석 리포트 작성</li>
+          </ul>
+        </div>
+
+        <div className="edu-item">
+          <div className="edu-header">
+            <h4 className="edu-title">Software Engineering</h4>
+            <span className="edu-period">2020.12 ~ 2021.04</span>
+          </div>
+          <p className="edu-details">코드스테이츠(Code States)</p>
+          <ul className="edu-desc">
+            <li>JavaScript 기반 Full-Stack 과정 수료</li>
+            <li>React, Node.js, MySQL 기반 웹 서비스 개발 학습</li>
+            <li>DB Schema 설계 및 API 기반 서비스 구조 이해</li>
+            <li>Git 기반 협업 및 프로젝트 수행</li>
           </ul>
         </div>
       </div>

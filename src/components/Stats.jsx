@@ -6,7 +6,7 @@ const Stats = () => {
   const [ref, isVisible] = useScrollReveal();
 
   const stats = [
-    { number: '7', suffix: '년', text: '데이터 기반 운영 기획 총 경력' },
+    { number: '6.4', suffix: '년', text: '데이터 기반 Business Operations 총 경력' },
     { number: '2.4', suffix: '배', text: '중고나라 페이 결제액 증가 수치' },
     { number: '2', suffix: '억', text: '예약 운영 인건비 연 절감' },
   ];
