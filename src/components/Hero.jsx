@@ -32,11 +32,9 @@ const Hero = () => {
         }}
       >
         <h1 className={`hero-title ${isVisible ? 'visible' : ''}`}>
-          <span className="line">데이터 기반으로</span>
+          <span className="line">데이터 기반 문제 해결사,</span>
           <br />
-          <span className="line highlight">플랫폼 운영을 혁신하는</span>
-          <br />
-          <span className="line">Business Operations 매니저 하윤택입니다.</span>
+          <span className="line highlight">Business Operations 하윤택입니다.</span>
         </h1>
         <p className={`hero-subtitle ${isVisible ? 'visible' : ''}`}>
           운영 과정의 비효율을 찾아내고 시스템화하여<br />서비스의 안정성과 성장을 동시에 견인합니다.
