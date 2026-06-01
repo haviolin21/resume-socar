@@ -37,7 +37,7 @@ const Header = () => {
             </div>
 
             <div className="action-buttons">
-              <a href="/resume_yuntaekha.pdf" download="하윤택_이력서.pdf" className="btn btn-primary">
+              <a href="/resume_yuntaek.pdf" download="하윤택_이력서.pdf" className="btn btn-primary">
                 📄 이력서 다운로드
               </a>
             </div>
